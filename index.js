@@ -1,4 +1,5 @@
-/*Operador logico - Or.
+/*
+Operador logico - Or.
 => Paga MEIA:
 - Menores de 18.
 - Idosos.
@@ -7,17 +8,15 @@
 */
 const readlineSync = require('readline-sync');
 
-let idade = readlineSync.question('Digite sua idade: ');
-let temCarteirinha = readlineSync.question('Tem carteirinha? ');
-let isAdulta;
-if (idade >= 18 && idade < 60) {
-   isAdulta = true;
-  if (idade < 18 || idade >= 60 || (isAdulta && temCarteirinha)) {
-    console.log('MEIA')
-  } else {
-    console.log('INTEIRA')
+let age = readlineSync.question('Input your age: ');
+let isWallet = readlineSync.question('have a wallet? ');
+// let isAdulta;
+if (age >= 18 && age < 60 && isWallet === "n") {
+    console.log('intire')
+  if (age < 18 || age >= 60 || (isAdulta && isWallet)) {
+    console.log('half')
   }
-} 
+}
 
 /*if(isAdulta && !temCarteirinha){
   console.log('INTEIRA')
